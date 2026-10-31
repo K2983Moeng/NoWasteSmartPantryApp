@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Toolbar menu shown on the Pantry List screen: this is the app's navigation element. -->
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- Opens the Suggested Recipes screen. "ifRoom" shows the text on the toolbar when space allows. -->
+    <item
+        android:id="@+id/action_suggested"
+        android:title="@string/menu_suggested"
+        app:showAsAction="ifRoom" />
+
+    <!-- Opens the Settings screen. "never" puts it in the overflow (three dots) menu. -->
+    <item
+        android:id="@+id/action_settings"
+        android:title="@string/menu_settings"
+        app:showAsAction="never" />
+</menu>

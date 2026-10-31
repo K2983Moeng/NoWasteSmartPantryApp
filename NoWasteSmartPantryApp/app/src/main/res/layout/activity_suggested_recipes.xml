@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Screen 3 layout: suggested recipes. One scrolling page holding two separate lists. -->
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Vertical stack of: empty message, "ready" header + list, "almost" header + list. -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+        <!-- Shown when ZERO recipes strictly match the pantry (the required feedback message). -->
+        <TextView
+            android:id="@+id/tvEmptySuggestions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="32dp"
+            android:text="@string/empty_suggestions"
+            android:textColor="@color/text_secondary"
+            android:textSize="16sp"
+            android:visibility="gone" />
+
+        <!-- Heading for the strict-match list. -->
+        <TextView
+            android:id="@+id/tvReadyHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="@string/header_ready"
+            android:textColor="@color/green_primary"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <!-- Strict matches: every ingredient is in the pantry in sufficient quantity. -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvReady"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:nestedScrollingEnabled="false" />
+
+        <!-- Heading for the bonus "Almost there" list (clearly separated from strict matches). -->
+        <TextView
+            android:id="@+id/tvAlmostHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:paddingTop="20dp"
+            android:text="@string/header_almost"
+            android:textColor="@color/expiring_amber"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <!-- Recipes missing exactly one ingredient. -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvAlmost"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:nestedScrollingEnabled="false" />
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

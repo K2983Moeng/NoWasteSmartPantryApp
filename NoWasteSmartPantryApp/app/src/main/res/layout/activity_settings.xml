@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Screen 5 layout: settings with two on/off switches. -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Switch 1: highlight items that are about to expire. -->
+    <com.google.android.material.switchmaterial.SwitchMaterial
+        android:id="@+id/swExpiryAlerts"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/setting_expiry_alerts"
+        android:textSize="17sp" />
+
+    <!-- Explanation under switch 1. -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="20dp"
+        android:text="@string/setting_expiry_alerts_desc"
+        android:textColor="@color/text_secondary" />
+
+    <!-- Switch 2: show or hide the bonus "Almost there" list. -->
+    <com.google.android.material.switchmaterial.SwitchMaterial
+        android:id="@+id/swAlmostThere"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/setting_almost_there"
+        android:textSize="17sp" />
+
+    <!-- Explanation under switch 2. -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/setting_almost_there_desc"
+        android:textColor="@color/text_secondary" />
+</LinearLayout>
