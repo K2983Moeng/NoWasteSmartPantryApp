@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- A simple vector launcher icon: a green circle with a white leaf, drawn on a 48x48 canvas. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="48dp"
+    android:height="48dp"
+    android:viewportWidth="48"
+    android:viewportHeight="48">
+    <!-- The green circular background. -->
+    <path
+        android:fillColor="#2E7D32"
+        android:pathData="M24,24m-22,0a22,22 0,1 1,44 0a22,22 0,1 1,-44 0" />
+    <!-- The white leaf shape in the middle. -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M14,32C14,20 22,14 34,14C34,26 28,34 16,34L14,34Z" />
+</vector>
